@@ -1,0 +1,397 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* ボックスのサイズを調整 */
+}
+
+
+/* ーーーーーーーーーー　全体設定　ーーーーーーーーーー */
+body {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1 {
+  padding-bottom: 0.5em;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: clamp(2.5em, 5vw + 1em, 5em);
+  color: #4A6A5A;
+  position: relative;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* X軸、Y軸、ぼかしの半径、色 */
+}
+/* ーーーーーーーーーー　リンクの線　ーーーーーーーーーー */
+
+header {
+  padding-top: 3em;
+  padding-bottom: 2em;
+  background: linear-gradient(to bottom, #FFEFBA, #FFFFFF);
+  }
+
+a {
+  text-decoration: none;
+  color: #4A6A5A;
+  position: relative;
+  }
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #6A8D73, #A67C52);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* ーーーーーーーーーー　ヘッダー　stat　ーーーーーーーーーー */
+header ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+header ul li {
+  font-size: 1.1em;
+  list-style-type: none;
+  margin: 0 1em;
+  padding-right: 1em;
+}
+
+/* ーーーーーーーーーー　メイン文章　stat　ーーーーーーーーーー */
+
+.kyanp-a {
+  font-family: "Zen Kurenaido", sans-serif;
+  font-weight: 600;
+  padding-top: 2em;
+  font-size: calc(1.2em + 1vw); /* 画面幅に応じたフォントサイズ */
+  max-width: 90vw; /* テキストの最大幅を画面幅の90%に制限 */
+  margin: 0 auto; /* 中央揃え */
+  text-align: center;
+}
+
+.b {
+  display: inline-block; /* マーカーをテキストの長さに合わせる */
+  padding: 0.2em 0.5em; /* マーカー内のテキスト周りに余白を付ける */
+  background-image: linear-gradient(transparent 70%, #bcfa89 70%);
+  border-radius: 5px; /* 丸みを付けて柔らかい印象に */
+}
+
+.kyanp-b, .kyanp-c {
+  font-weight: 400;
+  padding: 1em 5vw; /* 上下と左右に余白を追加 */
+  font-size: calc(0.5em + 0.5vw); /* フォントサイズをレスポンシブ対応 */
+  max-width: 90vw; /* 最大幅を設定して中央揃えを維持 */
+  margin: 0 auto;
+  text-align: center;
+  white-space: nowrap; /* 折り返しを禁止 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ーーーーーーーーーー　TOPイメージ　stat　ーーーーーーーーーー */
+.ime {
+    width: 100%;
+    text-align: center;
+	padding-top: 3em;
+}
+
+/* ーーーーーーーーーー　キャンプ初心者のテキスト部分　stat　ーーーーーーーーーー */
+.tekisuto {
+  font-weight: 300;
+  display: flex;
+  gap: 1em;
+  padding-bottom: 2em;
+}
+
+.tekisuto .item {
+  flex: 1;
+  padding: 0.7em;
+  text-align: left;
+}
+
+.tekisuto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+/* ーーーーーーーーーー　おすすめ特集文字 stat　ーーーーーーーーーー */
+h2 {
+  font-family: "Zen Kurenaido", sans-serif;
+  font-weight: 600;
+  color: #4A6A5A;
+  padding-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 span {
+  padding: 0.5em;
+}
+
+h2::before, h2::after {
+  content: "";
+  height: 1px;
+  width: 10%;
+  background: #4A6A5A;
+}
+
+/* ーーーーーーーーーー　おすすめ特集の写真・カラフル　stat　ーーーーーーーーーー */
+.box {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5em;
+}
+
+.box-a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+/* ーーーーーーーーーー　ポイントテキスト　stat　ーーーーーーーーーー */
+.pointo-c{
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+section div {
+	font-family: "Noto Sans JP", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;	
+	}
+
+.point-b {
+	font-family: "Zen Kurenaido", sans-serif;
+	font-size: 4em;
+	margin: 0;
+	padding: 0.3em;
+	text-align: center; /* テキストを中央揃え */
+	color: #4A6A5A;
+}
+
+.point-a {
+	padding-left: 4em; /* デフォルトで左側に余白 */
+	padding-bottom: 2em;
+	max-width: 90%; /* テキストが横幅に収まるように最大幅を指定 */
+	margin: 0 auto; /* コンテンツを中央に配置 */
+	text-align: justify; /* 左右の余白を整える */
+}
+
+.btn12 {
+	border: none;
+	border-top: 2px solid #666;
+	border-bottom: 2px solid #666;
+	padding-bottom: 1em;
+}
+
+.pointo-d{
+   font-family: "Caveat", cursive;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 0.8em;
+   }
+
+.nanba-1{
+	font-size: 2em;
+	}
+
+/* ーーーーーーーーーー　フッター　stat　ーーーーーーーーーー */
+footer {
+  padding-top: 3em;
+  padding-bottom: 5em;
+  background: linear-gradient(to bottom, #FFFFFF, #FFEFBA);
+}
+
+footer h3 {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  color: #4A6A5A;
+  margin-right: 1em;
+}
+
+/* SNSボタンのリスト全体を中央配置 */
+.snsbtniti {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  flex-wrap: wrap; /* ラップして小さい画面で折り返しを許可 */
+}
+
+/* 各アイコンのスタイル */
+.flowbtn9 {
+  font-size: 32px;
+  transition: .5s;
+  text-decoration: none;
+}
+
+/* アイコンの共通スタイル */
+.flowbtn9 i {
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 10px;
+  font-size: 24px;
+}
+
+/* 各アイコンの色設定 */
+.flowbtn9 .fa-youtube { color: #B05E00; }
+.flowbtn9 .fa-x-twitter { color: #4A6A5A; }
+.flowbtn9 .fa-instagram { color: #CC7A00; }
+.flowbtn9 .fa-square-facebook { color: #7C5A3A; }
+.flowbtn9 .fa-note-sticky { color: #8C7150; }
+.flowbtn9 .fa-line { color: #4A6A5A !important; }
+.flowbtn9 .fa-envelope { color: #B05E00; }
+
+/* ーーーーーーーーーー　レスポンシブ対応　stat　ーーーーーーーーーー */
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    padding: 0 1em;
+  }
+  
+  /* メインの画像ボックスの調整 */
+  .box {
+    gap: 10px;
+  }
+  
+  .box img {
+    max-width: 100%;
+  }
+  
+  /* テキストの列方向変更と余白 */
+  .tekisuto {
+    flex-direction: column;
+    padding: 0 1em;
+  }
+
+  .tekisuto .item {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  header h1, header ul {
+    text-align: left; /* モバイルで左揃えに変更 */
+    padding-left: 0.5em; /* 左側に余白を追加 */
+  }
+  
+  /* ナビゲーションリストを縦並びに */
+  header ul {
+    flex-direction: column;
+    align-items: flex-start; /* リストアイテムを左揃え */
+  }
+
+  header ul li {
+    padding: 0.5em 0; /* 各アイテムに上下余白を追加 */
+    font-size: 1em; /* テキストが大きすぎないように調整 */
+  }
+
+  .kyanp-a, .kyanp-b, .kyanp-c {
+    font-size: calc(1em + 0.5vw); /* 小さい画面でのサイズ調整 */
+    max-width: 95vw; /* モバイルでの余白をさらに減らす */
+    padding: 1em 5vw; /* 左右に余白を増やす */
+  }
+	
+  .kyanp-a {
+    font-size: calc(1.2em + 1vw); /* モバイル画面でのフォントサイズ調整 */
+    max-width: 95vw; /* モバイルでの余白をさらに確保 */
+    padding: 1em 2vw; /* 左右に余白を付けて中央に収まるように */
+  }
+  
+  .b {
+    padding: 0.1em 0.3em; /* モバイル用のコンパクトなパディング */
+  }
+  
+  /* フッターのSNSアイコン配置 */
+  footer h3 {
+    font-size: 1.2em; /* タイトルのフォントサイズを調整 */
+    margin-bottom: 0.5em;
+  }
+
+  .snsbtniti {
+    flex-direction: flex; /* 画面幅が狭い時に縦並びに */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .flowbtn9 {
+    font-size: 24px; /* アイコンサイズを小さめに */
+  }
+
+  .flowbtn9 i {
+    font-size: 20px; /* アイコン内のフォントサイズも調整 */
+  }
+   .kyanp-a, .kyanp-b, .kyanp-c {
+    font-size: calc(1em + 0.5vw); /* 小さい画面でのサイズ調整 */
+    max-width: 95vw; /* モバイルでの余白をさらに減らす */
+    padding: 1em 8vw; /* 小さい画面では左右の余白をさらに増やす */
+  }
+	
+	.point-b {
+		font-size: 2em; /* 小さな画面でのフォントサイズ調整 */
+	}
+
+	.point-a {
+		padding-left: 1em; /* 左余白を少なくしてレイアウト調整 */
+		font-size: 1em; /* 読みやすさを保つためにフォントサイズを調整 */
+		text-align: left; /* 小さい画面で左揃えに */
+	}
+}
+
+/* ーーーーーーーーーー　スクリーンショットボタン　stat　ーーーーーーーーーー */
+#screenshotButton {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #6A8D73, #A67C52);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.3s ease;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* スクリーンショットボタンのホバー */
+#screenshotButton:hover {
+  background: linear-gradient(135deg, #A67C52, #6A8D73);
+  transform: translateY(-3px);
+}
+
+#screenshotButton:focus {
+  outline: 2px solid #A67C52;
+}

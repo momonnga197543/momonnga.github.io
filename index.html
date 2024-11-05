@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="初心者も安心！コテージのあるキャンプ場特集">
+
+<!-- font1 スタンダード -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+<!-- font2 手書き風 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+JP:wght@100..900&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+<title>初心者向けキャンプコテージ</title>
+
+<!-- CSS -->
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+	
+<body> 
+
+<header>
+	<h1><a href="index.html">FOREST ESCAPE</a></h1>
+	<ul>
+		<li><a href="kote-ji.html">コテージ特集</a></li>
+		<li><a href="petto.html">ペット同伴おすすめ</a></li>
+		<li><a href="turi.html">釣りおすすめ</a></li>
+		<li><a href="tenntai.html">天体観測おすすめ</a></li>
+		<li><a href="gurannpinngu.html">グランピングおすすめ</a></li>
+		<li><a href="onnsen.html">温泉おすすめ</a></li>
+	</ul>
+</header>
+
+
+<main>
+
+  <img class="ime" src="img/キャンプ画像編集済み/TOP/キャンプにでかけよう！ (2).jpg" alt="キャンプトップ画像の写真">
+	
+<h2><span>おすすめ特集</span></h2>
+	<div class="box">
+      <div class="box-a">
+		<a href="kote-ji.html">
+		<img src="img/キャンプ画像編集済み/コテージ特集/6.png" alt="コテージ特集" width="360" height="235">
+		</a>
+		  
+		<a href="petto.html">  
+        <img src="img/キャンプ画像編集済み/ペット特集/2.png" alt="ペットOK特集" width="360" height="235">
+		</a>
+		 
+		<a href="turi.html">
+        <img src="img/キャンプ画像編集済み/釣り特集/5.png" alt="釣り特集" width="360" height="235">
+		</a>
+		  
+		<a href="tenntai.html">  
+        <img src="img/キャンプ画像編集済み/天体観測特集/4.png" alt="天体観測ができるキャンプ場の特集" width="360" height="235">
+		</a>
+		
+		<a href="gurannpinngu.html">
+        <img src="img/キャンプ画像編集済み/グランピング特集/1.png" alt="グランピング特集" width="360" height="235">
+		</a>  
+		  
+		<a href="onnsen.html">  
+        <img src="img/キャンプ画像編集済み/温泉特集/3.png" alt="温泉があるキャンプ場の特集" width="360" height="235">
+		</a>
+		
+		</div>
+	</div>
+</main>
+
+<footer>
+	<ul class="snsbtniti">
+		<h3>@2024 site</h3>
+		<li><a href="#" target="_blank" class="flowbtn9" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+		<li><a href="https://twitter.com/###" target="_blank" class="flowbtn9" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+		<li><a href="https://www.instagram.com/###" target="_blank" class="flowbtn9" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+		<li><a href="https://www.facebook.com/###" target="_blank" class="flowbtn9" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+		<li><a href="https://note.com/###" target="_blank" class="flowbtn9" aria-label="Note"><i class="fa-regular fa-note-sticky"></i></a></li>
+		<li><a href="https://lin.ee/###" target="_blank" class="flowbtn9" aria-label="LINE"><i class="fab fa-line"></i></a></li>
+		<li><a href="https://###.com/contact/" target="_blank" class="flowbtn9" aria-label="Contact"><i class="fa-solid fa-envelope"></i></a></li>
+  </ul>
+</footer>
+<script src="https://kit.fontawesome.com/c2afdbaf0b.js" crossorigin="anonymous"></script>
+
+	
+<!-- html2canvasライブラリ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<!-- スクリーンショットを撮るボタン -->
+<button id="screenshotButton">フルスクリーンショット</button>
+
+<script>
+document.getElementById('screenshotButton').addEventListener('click', function () {
+    html2canvas(document.body, { scale: 2 }).then(canvas => {
+        // 画像のダウンロードリンクを作成
+        let link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'screenshot.png';
+        link.click();
+    });
+});
+</script>
+
+</body>
+</html>
+
